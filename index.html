@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>UI Test</title>
+</head>
+<body>
+        <div class="wrap">
+                <button id="btn">팝업 띄우기</button>
+        </div>
+
+</body>
+</html>
+<style>
+        .wrap {
+            margin-top: 100px;
+        }
+</style>
+<script type="text/javascript">
+        document.querySelector('#btn').addEventListener('click', function() {
+                console.log('clicked');
+            window.open('popup.html', '팝업', 'width=500, height=500, left=100, top=50');
+        });
+</script>
