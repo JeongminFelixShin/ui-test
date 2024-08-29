@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Design Test Popup</title>
+</head>
+<body>
+        <div class="wrap">
+                <button class="shadow">Shadow</button>
+                <button class="gradient">Gradient</button>
+                <button class="stroke">Inside Stroke</button>
+                <button class="blur">Background Blur</button>
+                <button class="opacity">Opacity</button>
+                <button class="solid">Solid</button>
+        </div>
+
+</body>
+</html>
+<style>
+    body {
+        background: #A380FF;
+
+    }
+    .wrap {
+        margin: 0 auto;
+        margin-top: 210px;
+        width: 360px;
+        padding: 0 20px;
+        background: #A380FF;
+    }
+
+    button {
+        display: flex;
+        padding: 19px 24px;
+        width: 320px;
+        height: 64px;
+        margin-bottom: 20px;
+        color: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        border: none;
+
+        text-align: center;
+        /* Headline 1/Bold */
+        font-family: "Pretendard JP";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 144.5%; /* 26.01px */
+        letter-spacing: -0.004px;
+    }
+
+    .shadow {
+        border-radius: 32px;
+        background: var(--primary, #590FD2);
+        box-shadow: 0px 4px 10px 0px rgba(89, 15, 210, 0.40);
+    }
+
+    .gradient {
+        border-radius: 32px;
+        background: linear-gradient(270deg, #590FD2 0%, #FFA1BD 100%);
+    }
+
+    .stroke {
+        border-radius: 32px;
+        border: 2px solid var(--primary, #590FD2);
+        background: #FFA1BD;
+    }
+
+    .blur {
+        border-radius: 32px;
+        background: rgba(89, 15, 210, 0.20);
+    }
+
+    .opacity {
+        border-radius: 32px;
+        background: rgba(89, 15, 210, 0.50);
+    }
+
+    .solid {
+        border-radius: 32px;
+        background: var(--primary, #590FD2);
+    }
+</style>
