@@ -12,6 +12,10 @@
                 <button class="blur">Background Blur</button>
                 <button class="opacity">Opacity</button>
                 <button class="solid">Solid</button>
+                <button class="stroke-effect">Inside Stroke 효과</button>
+                <button class="shadow-effect">Shadow 효과</button>
+                <button class="state">State 설정</button>
+                <button class="state" disabled>State 설정</button>
         </div>
 
 </body>
@@ -23,7 +27,7 @@
     }
     .wrap {
         margin: 0 auto;
-        margin-top: 210px;
+        margin-top: 100px;
         width: 360px;
         padding: 0 20px;
         background: #A380FF;
@@ -50,6 +54,8 @@
         font-weight: 600;
         line-height: 144.5%; /* 26.01px */
         letter-spacing: -0.004px;
+
+        cursor: pointer;
     }
 
     .shadow {
@@ -83,4 +89,51 @@
         border-radius: 32px;
         background: var(--primary, #590FD2);
     }
+
+    .stroke-effect {
+        border-radius: 32px;
+        border: solid 2px #FFA1BD; /* solid 추가 */
+        background: var(--primary, #590FD2);
+    }
+
+    .shadow-effect {
+        border-radius: 32px;
+        background: var(--primary, #590FD2);
+        box-shadow: 0px 4px 10px 0px rgba(89, 15, 210, 0.40);
+    }
+
+    .state {
+        border-radius: 32px;
+        background: var(--primary, #590FD2);
+    }
+
+    .state:active { /* pressed */
+        border-radius: 32px;
+        background: #470CA8;
+    }
+
+    .state.selected {
+        border-radius: 32px;
+        border: solid 2px #FFF;
+        background: var(--primary, #590FD2);
+    }
+
+    .state:disabled {
+        border-radius: 32px;
+        background: #9B6FE4;
+        cursor: default;
+    }
 </style>
+
+<script type="text/javascript">
+        const stateBtn = document.querySelector('.state');
+        stateBtn.addEventListener('click', function() {
+                console.log('clicked');
+                stateBtn.classList.toggle('selected');
+        });
+
+        stateBtn.addEventListener('blur', function() {
+                console.log('click area out')
+                stateBtn.classList.remove('selected');
+        });
+</script>
