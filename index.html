@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
         <meta charset="UTF-8">
-        <title>UI Test</title>
+        <title>Mobile Interface Test</title>
 </head>
 <body>
-        <div class="wrap">
-                <button id="btn">Call Interface</button>
-        </div>
+<div class="wrap">
+        <button id="btn">Call Interface</button>
+</div>
 
 </body>
 </html>
 <style>
-        .wrap {
-            margin-top: 100px;
-        }
+    .wrap {
+        margin-top: 100px;
+    }
 </style>
 <script type="text/javascript">
         document.querySelector('#btn').addEventListener('click', function() {
-             console.log('clicked');
-             adftron://send_toast?msg='계정이 연결되었습니다';
+                console.log('clicked');
+                window.location.replace('adftron://send_toast?msg=계정이 연결되었습니다');
         });
 </script>
